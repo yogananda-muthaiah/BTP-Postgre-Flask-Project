@@ -1,0 +1,26 @@
+@deployed_url = https://postgre.cfapps.us10-001.hana.ondemand.com
+
+###
+GET {{deployed_url}}
+Content-Type: application/json
+
+###
+POST {{deployed_url}}/api/room
+Content-Type: application/json
+
+{"name": "1"}
+
+###
+POST {{deployed_url}}/api/temperature
+Content-Type: application/json
+
+{"temperature": 11.9, "room": 3, "date": "01-02-2023 01:02:01"}
+
+### 
+GET {{deployed_url}}/api/room/3
+Content-Type: application/json
+
+###
+GET {{deployed_url}}/api/average
+Content-Type: application/json
+
