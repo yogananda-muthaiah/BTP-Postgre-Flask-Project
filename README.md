@@ -8,6 +8,15 @@ SAP BTP Project - Connected to Postgre DB with Flask Python
 ```
 cf login --sso
 ```
+## Enable Postgre DB Service in command line
+```
+cf create-service postgresql-db trial postgres-hyperscaler
+
+### Just wait - Need to execute after 5mins
+cf create-service-key postgres-hyperscaler postgre_key      
+cf service-key postgres-hyperscaler-postgre_key
+```
+
 
 ## Deployment Steps for SAP BTP Cloud Foundry
 
